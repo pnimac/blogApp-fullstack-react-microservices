@@ -2,7 +2,7 @@
 
 I built a simple blog app that also demostrate microservice orchestration for a simple estore checkout app using a gateway configuration, a config server, and a discovery server.
 
-# Usecase
+## Usecase
 ![Microservice Orchestration Architecure](images/msorchestration.png)
 
 
