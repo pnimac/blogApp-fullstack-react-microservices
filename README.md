@@ -3,7 +3,7 @@
 Demostrate microservice orchestration for a simple estore checkout app using a gateway configuration, a config server, and a discovery server.
 
 # Usecase
-![Microservice Orchestration Architecure](images/msorchestration1.png)
+![Microservice Orchestration Architecure](images/msorchestration.png)
 
 ## Architecture
 
