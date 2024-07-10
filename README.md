@@ -12,8 +12,8 @@ I built a simple blog app that also demostrate microservice orchestration for a 
 2. **Discovery Server** : Manages the registration and discovery of microservices.
 3. **API Gateway** : Routes requests to appropriate microservices and provides load balancing, authentication, and other gateway functionalities.
 4. **User Service** : Separate services for user management
-5. **Post Service** : Separate services for payment management.
-6. **Comment Service** : Separate services for order management.
+5. **Post Service** : Separate services for post management.
+6. **Comment Service** : Separate services for comment management.
 
 ## Features
 
