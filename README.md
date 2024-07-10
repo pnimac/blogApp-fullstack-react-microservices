@@ -46,6 +46,31 @@ POST /posts/{postId}/comments: Add a comment to a blog post
 GET /posts/{postId}/comments: Get all comments for a blog post
 DELETE /comments/{id}: Delete a comment
 
+
+auth-service
+This microservice handles user authentication and authorization using JWT tokens.
+
+AuthController.java: Exposes endpoints for user authentication and registration.
+AuthService.java: Implements the logic for authentication and user management.
+JwtTokenProvider.java: Utility class for generating and validating JWT tokens.
+UserDetailsServiceImpl.java: Implements Spring Security's UserDetailsService to load user-specific data.
+
+
+post-service
+This microservice manages posts.
+
+PostController.java: Exposes endpoints for fetching all posts and adding a new post.
+PostService.java: Implements business logic for managing posts.
+Post.java: Entity class representing a post.
+Comment.java: Entity class representing a comment.
+comment-service
+This microservice manages comments on posts.
+
+CommentController.java: Exposes endpoints for adding comments to posts.
+CommentService.java: Implements business logic for managing comments.
+Comment.java: Entity class representing a comment.
+
+
 ## Technologies Used
 
 - Java
