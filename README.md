@@ -31,7 +31,7 @@ I built a simple blog app that also demostrate microservice orchestration for a 
 - Spring Data JPA
 - Spring Security
 - Thymeleaf
-- H2 Database (or any other database of your choice)
+- MySQL
 - Maven
 - Docker
 
