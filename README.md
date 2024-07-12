@@ -5,7 +5,7 @@ This is a simple blog application demostratating microservice orchestration by u
 ## Architecture
 ![Microservice Orchestration Architecure](images/architecture.png)
 
-## Feature
+## Features
 
 1. Home Page: Displays a list of all posts by all users, ordered by the most recent.
 2. Signup Page: Collects basic information to register a new user.
