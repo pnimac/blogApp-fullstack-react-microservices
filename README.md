@@ -2,6 +2,9 @@
 
 This is a simple blog application demostratating microservice orchestration by using an API Gateway, a Configuration server, an Eureka Discovery server and microservices for different functional components like User Management, Posts, Comments etc..  Thymeleaf templates are used for Front-end UI.
 
+## Architecture
+![Microservice Orchestration Architecure](images/architecture.png)
+
 ## Feature
 
 1. Home Page: Displays a list of all posts by all users, ordered by the most recent.
@@ -10,9 +13,6 @@ This is a simple blog application demostratating microservice orchestration by u
 4. Add Post Page: Allows users to create a new post with a character limit of 126.
 5. Add Comment Page: Enables users to comment on posts posted by themselves or other users, with a character limit of 126.
 6. Content Management: Users can delete their own posts and comments.
-
-## Architecture
-![Microservice Orchestration Architecure](images/architecture.png)
 
 ## Components
 
