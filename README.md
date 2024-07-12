@@ -36,7 +36,22 @@ This is a simple blog application demostratating microservice orchestration by u
 - Maven
 - Docker
 
-## Prerequisite
+# Prerequisite
+
+* Ensure you have Maven installed. You can verify this by running `mvn -v` in your terminal.
+
+* Ensure you have JDK installed. You can verify this by running `java -version` in your terminal.
+
+* Ensure you have Node.js and npm (Node Package Manager) installed. You can verify this by running `node -v` and `npm -v` in your terminal.
+  
+
+# Testing
+
+1. Navigate to the backend service project directory and run command:
+
+`mvn clean install && mvn spring-boot:run`
+
+
 
 
 ## Testing
