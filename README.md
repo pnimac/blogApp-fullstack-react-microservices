@@ -1,10 +1,18 @@
-## A simple Blog App
+## Description
 
-I built a simple blog app that also demostrate microservice orchestration for a simple estore checkout app using a gateway configuration, a config server, and a discovery server.
+This is a simple blog application demostratating microservice orchestration by using an API Gateway, a Configuration server, an Eureka Discovery server and microservices for different functional components like User Management, Posts, Comments etc..  Thymeleaf templates are used for Front-end UI.
 
-## Usecase
-![Microservice Orchestration Architecure](images/msorchestration.png)
+## Feature
 
+1. Home Page: Displays a list of all posts by all users, ordered by the most recent.
+2. Signup Page: Collects basic information to register a new user.
+3. Login Page: Authenticates users via JWT token authentication, enabling them to comment on existing posts and create new posts.
+4. Add Post Page: Allows users to create a new post with a character limit of 126.
+5. Add Comment Page: Enables users to comment on posts posted by themselves or other users, with a character limit of 126.
+6. Content Management: Users can delete their own posts and comments.
+
+## Architecture
+![Microservice Orchestration Architecure](images/architecure.png)
 
 ## Components
 
@@ -16,79 +24,21 @@ I built a simple blog app that also demostrate microservice orchestration for a 
 6. **Comment Service** : Separate services for comment management.
 7. **Authorization Service** : Separate services responsible for handling authentication and issuing tokens. 
 
-## Features
-
-1. Landing at home page - All users (including unregistered) can view all posts and comments.
-2. Logged in users (Authenticated users) can add new posts, view only their own posts, edit or delete them (CRUD functionality).
-3. Users can write comments to particular posted by themselves or other users.
-4. Basic validation for creating new posts: body must not be empty and title must have length of 7 by default and other.
-5. Spring Security authentication and authorization rules ensures that users only able to edit or delete their own posts.
-6. Front-end made using Thymeleaf templates.
-
-## Endpoints
-
-# User Service:
-Endpoints:
-POST /users/register: Register a new user
-POST /users/login: Authenticate a user
-GET /users/{id}: Get user profile information
-
-# Post Service:
-Endpoints:
-POST /posts: Create a new blog post
-GET /posts: Get all blog posts
-GET /posts/{id}: Get a specific blog post
-DELETE /posts/{id}: Delete a blog post
-
-# Comment Service:
-Endpoints:
-POST /posts/{postId}/comments: Add a comment to a blog post
-GET /posts/{postId}/comments: Get all comments for a blog post
-DELETE /comments/{id}: Delete a comment
-
-
-auth-service
-This microservice handles user authentication and authorization using JWT tokens.
-
-AuthController.java: Exposes endpoints for user authentication and registration.
-AuthService.java: Implements the logic for authentication and user management.
-JwtTokenProvider.java: Utility class for generating and validating JWT tokens.
-UserDetailsServiceImpl.java: Implements Spring Security's UserDetailsService to load user-specific data.
-
-
-post-service
-This microservice manages posts.
-
-PostController.java: Exposes endpoints for fetching all posts and adding a new post.
-PostService.java: Implements business logic for managing posts.
-Post.java: Entity class representing a post.
-Comment.java: Entity class representing a comment.
-comment-service
-This microservice manages comments on posts.
-
-CommentController.java: Exposes endpoints for adding comments to posts.
-CommentService.java: Implements business logic for managing comments.
-Comment.java: Entity class representing a comment.
-
-
-## Technologies Used
+## Tech Stack
 
 - Java
 - Spring Boot
 - Spring Data JPA
 - Spring Security
+- Spring MVC
 - Thymeleaf
 - MySQL
 - Maven
 - Docker
 
-### Installation
-1. **Clone the repository**:
-```bash
-   git clone https://github.com/your-username/simple-blog-app.git
-   cd simple-blog-app
+## Prerequisite
 
-2. **Run Docker file**:
-```bash
-   Docker file run 
+
+## Testing
+
 
