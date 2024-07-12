@@ -12,7 +12,7 @@ This is a simple blog application demostratating microservice orchestration by u
 6. Content Management: Users can delete their own posts and comments.
 
 ## Architecture
-![Microservice Orchestration Architecure](images/architecure.png)
+![Microservice Orchestration Architecure](images/architecture.png)
 
 ## Components
 
