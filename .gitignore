@@ -7,6 +7,6 @@
 *.mvnw.cmd
 
 **/.metadata/
-**/settings/
+**/.settings/
 **/target/
 
