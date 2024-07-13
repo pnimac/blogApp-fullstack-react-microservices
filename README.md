@@ -1,6 +1,6 @@
 ## Description
 
-This is a simple blog application demostratating microservice orchestration by using an API Gateway, a Configuration server, an Eureka Discovery server and microservices for different functional components like User Management, Posts, Comments etc..  Thymeleaf templates are used for Front-end UI.
+This is a simple blog application demostratating microservice orchestration by using an API Gateway, a Configuration server, an Eureka Discovery server and microservices for different functional components like User Management, Posts, Comments etc..  React is used for UI client.
 
 ## Architecture
 ![Microservice Orchestration Architecure](images/architecture.png)
@@ -38,7 +38,7 @@ This is a simple blog application demostratating microservice orchestration by u
 - Spring Data JPA
 - Spring Security
 - Spring MVC
-- Thymeleaf
+- React
 - MySQL
 - Maven
 - Docker

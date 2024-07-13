@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.pnimac.auth.model.Role;
@@ -27,30 +28,27 @@ public class CustomUserDetailsService implements UserDetailsService{
 	 @Autowired
 	 private RoleRepository roleRepository;
 	 
+	 @Autowired
+	 private PasswordEncoder passwordEncoder;
+
+	 
 	 private final String DEFAULT_ROLE = "BLOGUSER";
 	 	
 	 
-	public CustomUserDetailsService(UserRepository userRepository, RoleRepository roleRepository) {
+	public CustomUserDetailsService(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder) {
 		super();
 		this.userRepository = userRepository;
 		this.roleRepository = roleRepository;
+		this.passwordEncoder = passwordEncoder;
 	}
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepository.findByUsername(username);
-        if (user == null) {
-            throw new UsernameNotFoundException("User not found with username: " + username);
-        }
-        return user;
-	}
-	
-	public UserDetails findUserByUsername(String username) {
 		return userRepository.findByUsername(username);
 	}
 
 	public User saveNewUser(User user) throws RoleNotFoundException {
-		user.setPassword(user.getPassword());
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
 		user.setEnabled(true);
 		Optional<Role> optionalRoles = roleRepository.findByRolename(DEFAULT_ROLE);
 		if(optionalRoles.isEmpty()) {
