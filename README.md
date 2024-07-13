@@ -19,10 +19,17 @@ This is a simple blog application demostratating microservice orchestration by u
 1. **Config Server** : Centralizes configuration for all microservices.
 2. **Discovery Server** : Manages the registration and discovery of microservices.
 3. **API Gateway** : Routes requests to appropriate microservices and provides load balancing, authentication, and other gateway functionalities.
-4. **User Service** : Separate services for user management. Manages user registration and authentication.
+4. **Authorization Service** : Separate services responsible for handling authentication and issuing tokens. 
 5. **Post Service** : Separate services for post management. Manages blog posts, including creation, retrieval and deletion.
 6. **Comment Service** : Separate services for comment management.
-7. **Authorization Service** : Separate services responsible for handling authentication and issuing tokens. 
+
+## Data-model
+
+![Microservice Orchestration Architecure](images/datamodel.png)
+
+* ### The UserDetails interface is a core abstraction that represents a user principal. Spring Security relies on the UserDetails interface to interact with user details stored in your application’s authentication system. UserDetails is used to authenticate users (verify their identity) and authorize them based on their assigned roles and permissions (authorities).  
+
+* ### Flyway is used to ensure that your database schema is automatically created and managed over time.
 
 ## Tech Stack
 
