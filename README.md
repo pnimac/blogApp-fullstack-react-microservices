@@ -2,7 +2,10 @@
 
 This is a simple blog application demostratating microservice orchestration by using an API Gateway, a Configuration server, an Eureka Discovery server and microservices for different functional components like User Management, Posts, Comments etc..  Thymeleaf templates are used for Front-end UI.
 
-## Feature
+## Architecture
+![Microservice Orchestration Architecure](images/architecture.png)
+
+## Features
 
 1. Home Page: Displays a list of all posts by all users, ordered by the most recent.
 2. Signup Page: Collects basic information to register a new user.
@@ -10,9 +13,6 @@ This is a simple blog application demostratating microservice orchestration by u
 4. Add Post Page: Allows users to create a new post with a character limit of 126.
 5. Add Comment Page: Enables users to comment on posts posted by themselves or other users, with a character limit of 126.
 6. Content Management: Users can delete their own posts and comments.
-
-## Architecture
-![Microservice Orchestration Architecure](images/architecure.png)
 
 ## Components
 
@@ -43,7 +43,22 @@ This is a simple blog application demostratating microservice orchestration by u
 - Maven
 - Docker
 
-## Prerequisite
+# Prerequisite
+
+* Ensure you have Maven installed. You can verify this by running `mvn -v` in your terminal.
+
+* Ensure you have JDK installed. You can verify this by running `java -version` in your terminal.
+
+* Ensure you have Node.js and npm (Node Package Manager) installed. You can verify this by running `node -v` and `npm -v` in your terminal.
+  
+
+# Testing
+
+1. Navigate to the backend service project directory and run command:
+
+`mvn clean install && mvn spring-boot:run`
+
+
 
 
 ## Testing
