@@ -28,6 +28,9 @@ public class User implements UserDetails {
 	private String password;
 
 	@Column(nullable = false)
+	private String email;
+
+	@Column(nullable = false)
 	private boolean enabled = true;
 
 	@ManyToMany(fetch = FetchType.EAGER)
@@ -54,4 +57,7 @@ public class User implements UserDetails {
 		return enabled;
 	}
 
+	public String getEmail() {
+		return email;
+	}
 }
