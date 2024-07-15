@@ -41,23 +41,4 @@ public class User implements UserDetails {
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return roles;
 	}
-
-	@Override
-	public String getPassword() {
-		return password;
-	}
-
-	@Override
-	public String getUsername() {
-		return username;
-	}
-
-	@Override
-	public boolean isEnabled() {
-		return enabled;
-	}
-
-	public String getEmail() {
-		return email;
-	}
 }

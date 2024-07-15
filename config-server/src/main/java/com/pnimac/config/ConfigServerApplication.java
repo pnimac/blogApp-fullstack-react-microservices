@@ -1,4 +1,4 @@
-package com.pnimac.config.config;
+package com.pnimac.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

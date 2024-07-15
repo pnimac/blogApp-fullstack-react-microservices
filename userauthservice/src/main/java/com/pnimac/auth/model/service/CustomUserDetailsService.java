@@ -32,7 +32,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Autowired
 	private RoleRepository roleRepository;
 
-	private final String ROLE_USER = "ROLE_USER";
+	private final String ROLE_USER = "USER";
 
 	public CustomUserDetailsService(UserRepository userRepository, RoleRepository roleRepository) {
 		super();

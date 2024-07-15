@@ -24,4 +24,4 @@ CREATE TABLE IF NOT EXISTS user_role (
 );
 
 insert into role (id, rolename) VALUES (1, 'ADMIN');
-insert into role (id, rolename) VALUES (2, 'BLOGUSER');
+insert into role (id, rolename) VALUES (2, 'USER');

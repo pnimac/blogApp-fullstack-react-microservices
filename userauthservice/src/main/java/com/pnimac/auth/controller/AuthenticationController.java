@@ -60,8 +60,7 @@ public class AuthenticationController {
 	}
 
 	@PostMapping("/login")
-	public ResponseEntity<?> createAuthenticationToken(@RequestBody String rawBody) throws Exception {
-	    System.out.println("Received login request: " + rawBody);
+	public ResponseEntity<?> login(@RequestBody String rawBody) throws Exception {
 	    try {
 	        ObjectMapper mapper = new ObjectMapper();
 	        LoginRequest loginRequest = mapper.readValue(rawBody, LoginRequest.class);
@@ -80,7 +79,6 @@ public class AuthenticationController {
 
 	@PostMapping("/signup")
 	public ResponseEntity<?> signup(@RequestBody String rawBody) throws Exception {
-	    System.out.println("Received register request: " + rawBody);
 		RegisterRequest registerRequest = objectMapper.readValue(rawBody, RegisterRequest.class);
 		// Check if user already exists
 		if (userRepository.findByUsername(registerRequest.getUsername()).isPresent()) {
@@ -95,7 +93,7 @@ public class AuthenticationController {
 		user.setUsername(registerRequest.getUsername());
 		user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
 		user.setEmail(registerRequest.getEmail());
-
+		userDetailsService.save(user);
 		return ResponseEntity.ok("User registered successfully");
 	}
 

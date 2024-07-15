@@ -1,35 +1,78 @@
-## Description
+# Blog Application: Microservice Orchestration
 
-This is a simple blog application demostratating microservice orchestration by using an API Gateway, a Configuration server, an Eureka Discovery server and microservices for different functional components like User Management, Posts, Comments etc..  React is used for UI client.
+This is a simple blog application demonstrating microservice orchestration using an API Gateway, a Configuration server, an Eureka Discovery server, and microservices for various functional components such as User Management, Posts Management, and Comments Management. React is used for the UI client.
 
 ## Architecture
-![Microservice Orchestration Architecure](images/architecture.png)
+
+![Microservice Orchestration Architecture](images/architecture.png)
 
 ## Features
 
-1. Home Page: Displays a list of all posts by all users, ordered by the most recent.
-2. Signup Page: Collects basic information to register a new user.
-3. Login Page: Authenticates users via JWT token authentication, enabling them to comment on existing posts and create new posts.
-4. Add Post Page: Allows users to create a new post with a character limit of 126.
-5. Add Comment Page: Enables users to comment on posts posted by themselves or other users, with a character limit of 126.
-6. Content Management: Users can delete their own posts and comments.
+1. **Home Page:** Displays a list of all posts by all users, ordered by the most recent.
+2. **Signup Page:** Collects basic information to register a new user.
+3. **Login Page:** Authenticates users via JWT token authentication, enabling them to comment on existing posts and create new posts.
+4. **Add Post Page:** Allows users to create new posts.
+5. **Add Comment Page:** Enables users to comment on posts posted by themselves or other users.
+6. **Content Management:** Users can delete their own posts and comments.
+
+## Screenshots
+
+![Homepage and Signup](images/home-signup.png)
+![Posts](images/posts.png)
 
 ## Components
 
-1. **Config Server** : Centralizes configuration for all microservices.
-2. **Discovery Server** : Manages the registration and discovery of microservices.
-3. **API Gateway** : Routes requests to appropriate microservices and provides load balancing, authentication, and other gateway functionalities.
-4. **Authorization Service** : Separate services responsible for handling authentication and issuing tokens. 
-5. **Post Service** : Separate services for post management. Manages blog posts, including creation, retrieval and deletion.
-6. **Comment Service** : Separate services for comment management.
+![Microservice Orchestration Architecture](images/datamodel.png)
 
-## Data-model
+1. **Config Server:** Centralizes configuration for all microservices.
+2. **Discovery Server:** Manages the registration and discovery of microservices.
+3. **API Gateway:** Routes requests to appropriate microservices and provides load balancing, authentication, and other gateway functionalities.
+4. **Authorization Service:** Handles authentication and token issuance.
+5. **Post Service:** Manages blog posts, including creation, retrieval, and deletion.
+6. **Comment Service:** Manages comments, including creation, retrieval, and deletion.
 
-![Microservice Orchestration Architecure](images/datamodel.png)
+## JWT and Spring Security Architecture
 
-* ### The UserDetails interface is a core abstraction that represents a user principal. Spring Security relies on the UserDetails interface to interact with user details stored in your application’s authentication system. UserDetails is used to authenticate users (verify their identity) and authorize them based on their assigned roles and permissions (authorities).  
+![JWT Security Architecture](images/JWT-SpringSecurity.png)
 
-* ### Flyway is used to ensure that your database schema is automatically created and managed over time.
+1. **SecurityConfig:** Configures security settings for the application.
+2. **JwtAuthenticationFilter:** Intercepts requests to validate JWT tokens.
+3. **JwtUtil:** Handles creation, parsing, and validation of JWT tokens using the jjwt library.
+4. **CustomUserDetailsService:** Loads user-specific data.
+5. **AuthenticationController:** Provides tokens in responses for successful login requests.
+
+## React Application Structure
+
+![React Application Architecture](images/React-components.png)
+
+1. **App Component (`App.js`):**
+   - Root component
+   - Sets up routing
+   - Wraps the application with AuthProvider
+
+2. **Authentication Context (`AuthContext.js`):**
+   - Manages global authentication state
+   - Provides login, logout, and signup functions
+   - Checks and maintains authentication status
+
+3. **API Services:**
+   - `userAuthAPI.js`: Handles authentication-related API calls
+   - `postAPI.js`: Manages post-related API calls
+   - `commentAPI.js`: Handles comment-related API calls
+
+4. **Components:**
+   - `Navbar.js`: Navigation bar with conditional rendering based on auth status
+   - `Home.js`: Main page, displays posts for authenticated users
+   - `Login.js`: Handles user login
+   - `SignUp.js`: Manages user registration
+   - `PostList.js`: Displays list of posts with options to add/view comments
+   - `AddComment.js`: Form for adding new comments
+   - `ViewComments.js`: Displays comments for a specific post
+
+## Database
+
+- The application was developed using MySQL 8.4.0.
+- Flyway is used to ensure that your database schema is automatically created and managed over time.
 
 ## Tech Stack
 
@@ -43,24 +86,29 @@ This is a simple blog application demostratating microservice orchestration by u
 - Maven
 - Docker
 
-# Prerequisite
+## Prerequisites
 
-* Ensure you have Maven installed. You can verify this by running `mvn -v` in your terminal.
+1. **Maven:** Ensure Maven is installed. Verify by running `mvn -v` in your terminal.
+2. **JDK:** Ensure JDK is installed. Verify by running `java -version` in your terminal.
+3. **Node.js and npm:** Ensure Node.js and npm are installed. Verify by running `node -v` and `npm -v` in your terminal.
+4. **MySQL:** Ensure MySQL is installed and configured properly. Update the following properties in your `application.properties` files:
+   - **Port:** Set the port number for MySQL.
+   - **Username:** Specify your MySQL username.
+   - **Password:** Provide the password associated with your MySQL username.
 
-* Ensure you have JDK installed. You can verify this by running `java -version` in your terminal.
+## Testing
 
-* Ensure you have Node.js and npm (Node Package Manager) installed. You can verify this by running `node -v` and `npm -v` in your terminal.
-  
-
-# Testing
-
-1. Navigate to the backend service project directory and run command:
+Navigate to the backend service project directory and run the following command:
 
 `mvn clean install && mvn spring-boot:run`
 
+Start the services in the following order to ensure proper service discovery and configuration:
 
-
-
-## Testing
+1. Discovery Service (Eureka )
+2. Config Service
+3. API Gateway Service
+4. UserAuthService
+5. PostService
+6. CommentService
 
 
