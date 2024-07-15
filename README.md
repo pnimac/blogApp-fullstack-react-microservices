@@ -16,13 +16,13 @@ This is a simple blog application demonstrating microservice orchestration using
 
 ## Screenshots
 
-<img src="images/home-signup.png" alt="Homepage and Signup]" width="600" height="400">
+<img src="images/home-signup.png" alt="Homepage and Signup]">
 <img src="images/createPost.png" alt="Create Post" width="600" height="500">
 <img src="images/posts.png" alt="Posts" width="600" height="500">
 
 ## Components
 
-<img src="images/datamodel.png" alt="Data Model" width="600" height="400">
+<img src="images/datamodel.png" alt="Data Model" width="600" height="500">
 
 1. **Config Server:** Centralizes configuration for all microservices.
 2. **Discovery Server:** Manages the registration and discovery of microservices.
