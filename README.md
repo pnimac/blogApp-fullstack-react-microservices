@@ -34,7 +34,7 @@ This is a simple blog application demonstrating microservice orchestration using
 
 ## JWT and Spring Security Architecture
 
-<img src="images/JWT-SpringSecurity.png" alt="JWT-SpringSecurity" width="600" height="500">
+<img src="images/JWT-SpringSecurity.png" alt="JWT-SpringSecurity" width="500" height="400">
 
 1. **SecurityConfig:** Configures security settings for the application.
 2. **JwtAuthenticationFilter:** Intercepts requests to validate JWT tokens.
