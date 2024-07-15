@@ -15,7 +15,7 @@ This is a simple blog application demonstrating microservice orchestration using
 6. **Content Management:** Users can delete their own posts and comments.
 
 ## Screenshots
-<img src="images/home-signup.png" alt="Home-Signup" width="600" height="600"/>
+<img src="images/home-signup.png" alt="Home-Signup" width="800" height="400"/>
 
 <img src="images/createPost.png" alt="Create Post" width="800" height="700"/>
 
