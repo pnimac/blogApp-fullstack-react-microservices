@@ -3,7 +3,7 @@
 This is a simple blog application demonstrating microservice orchestration using an API Gateway, a Configuration server, an Eureka Discovery server, and microservices for various functional components such as User Management, Posts Management, and Comments Management. React is used for the UI client.
 
 ## Architecture
-<img src="images/architecture.png" alt="Architecture]" width="600" height="400">
+<img src="images/architecture.png" alt="Architecture]" width="600" height="500">
 
 ## Features
 
@@ -16,13 +16,13 @@ This is a simple blog application demonstrating microservice orchestration using
 
 ## Screenshots
 
-<img src="images/home-signup.png" alt="Homepage and Signup]" width="200" height="100">
-<img src="images/createPost.png" alt="Create Post" width="200" height="200">
-<img src="images/posts.png" alt="Posts" width="200" height="200">
+<img src="images/home-signup.png" alt="Homepage and Signup]" width="600" height="400">
+<img src="images/createPost.png" alt="Create Post" width="600" height="500">
+<img src="images/posts.png" alt="Posts" width="600" height="500">
 
 ## Components
 
-<img src="images/datamodel.png" alt="Data Model" width="100" height="200">
+<img src="images/datamodel.png" alt="Data Model" width="600" height="400">
 
 1. **Config Server:** Centralizes configuration for all microservices.
 2. **Discovery Server:** Manages the registration and discovery of microservices.
@@ -33,7 +33,7 @@ This is a simple blog application demonstrating microservice orchestration using
 
 ## JWT and Spring Security Architecture
 
-<img src="images/JWT-SpringSecurity.png" alt="JWT-SpringSecurity" width="100" height="200">
+<img src="images/JWT-SpringSecurity.png" alt="JWT-SpringSecurity" width="600" height="500">
 
 1. **SecurityConfig:** Configures security settings for the application.
 2. **JwtAuthenticationFilter:** Intercepts requests to validate JWT tokens.
@@ -43,7 +43,7 @@ This is a simple blog application demonstrating microservice orchestration using
 
 ## React Application Structure
 
-<img src="images/React-components.png" alt="React-components" width="100" height="200">
+<img src="images/React-components.png" alt="React-components" width="600" height="500">
 
 1. **App Component (`App.js`):**
    - Root component
