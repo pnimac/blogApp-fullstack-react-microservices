@@ -28,6 +28,9 @@ public class User implements UserDetails {
 	private String password;
 
 	@Column(nullable = false)
+	private String email;
+
+	@Column(nullable = false)
 	private boolean enabled = true;
 
 	@ManyToMany(fetch = FetchType.EAGER)
@@ -38,20 +41,4 @@ public class User implements UserDetails {
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return roles;
 	}
-
-	@Override
-	public String getPassword() {
-		return password;
-	}
-
-	@Override
-	public String getUsername() {
-		return username;
-	}
-
-	@Override
-	public boolean isEnabled() {
-		return enabled;
-	}
-
 }
