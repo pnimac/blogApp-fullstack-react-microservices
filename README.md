@@ -17,9 +17,9 @@ This is a simple blog application demonstrating microservice orchestration using
 ## Screenshots
 <img src="images/home-signup.png" alt="Home-Signup"/></br></br>
 
-<img src="images/createPost.png" alt="Create Post" width="800" height="700"/></br></br>
+<img src="images/createPost.png" alt="Create Post"/></br></br>
 
-<img src="images/posts.png" alt="Posts" width="800" height="700"/>
+<img src="images/posts.png" alt="Posts"/>
 
 ## Components
 
