@@ -17,12 +17,13 @@ This is a simple blog application demonstrating microservice orchestration using
 
 ## Screenshots
 
-![Homepage and Signup](images/home-signup.png)
-![Posts](images/posts.png)
+<img src="images/home-signup.png" alt="Homepage and Signup]" width="200" height="100">
+<img src="images/createPost.png" alt="Create Post" width="200" height="200">
+<img src="images/posts.png" alt="Posts" width="200" height="200">
 
 ## Components
 
-![Microservice Orchestration Architecture](images/datamodel.png)
+<img src="images/datamodel.png" alt="Data Model" width="100" height="200">
 
 1. **Config Server:** Centralizes configuration for all microservices.
 2. **Discovery Server:** Manages the registration and discovery of microservices.
@@ -33,7 +34,7 @@ This is a simple blog application demonstrating microservice orchestration using
 
 ## JWT and Spring Security Architecture
 
-![JWT Security Architecture](images/JWT-SpringSecurity.png)
+<img src="images/JWT-SpringSecurity.png" alt="JWT-SpringSecurity" width="100" height="200">
 
 1. **SecurityConfig:** Configures security settings for the application.
 2. **JwtAuthenticationFilter:** Intercepts requests to validate JWT tokens.
@@ -43,7 +44,7 @@ This is a simple blog application demonstrating microservice orchestration using
 
 ## React Application Structure
 
-![React Application Architecture](images/React-components.png)
+<img src="images/React-components.png" alt="React-components" width="100" height="200">
 
 1. **App Component (`App.js`):**
    - Root component
