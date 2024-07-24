@@ -1,6 +1,6 @@
 # Blog Application: Microservice Orchestration
 
-This is a simple blog application demonstrating microservice orchestration using an API Gateway, a Configuration server, an Eureka Discovery server, and microservices for various functional components such as User Management, Posts Management, and Comments Management. React is used for the UI client.
+A simple blog application demonstrating microservice orchestration using an API Gateway, a Configuration server, an Eureka Discovery server, and microservices for various functional components such as User Authorization Management, Posts Management, and Comments Management in Spring Boot and Spring Security. React is used for the UI client.
 
 ## Architecture
 <img src="images/architecture.png" alt="Architecture]" width="600" height="500">
