@@ -21,7 +21,7 @@ A simple blog application demonstrating microservice orchestration using an API 
 **CreatePost**
 <img src="images/createPost.png" alt="Create Post"/></br></br>
 
-**Post List**
+**Comment**
 <img src="images/posts.png" alt="Posts"/>
 
 ## Components
